@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Ambulance 24/7 — Transport Sanitaire 24h/24, 7j/7</title>
+    <meta
+      name="description"
+      content="Ambulance 24h/24 7j/7 : transport sanitaire, consultations, transferts inter-établissements, retour à domicile. Intervention rapide, équipe qualifiée."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <link rel="canonical" href="https://exemple.tn/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:title" content="Ambulance 24/7 — Transport Sanitaire 24h/24, 7j/7" />
+    <meta
+      property="og:description"
+      content="Transport sanitaire, transferts, consultations, hospitalisations. Disponible 24h/24, 7j/7."
+    />
+    <meta property="og:url" content="https://exemple.tn/" />
+    <meta property="og:image" content="assets/img/hero.jpg" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ambulance 24/7 — Transport Sanitaire" />
+    <meta
+      name="twitter:description"
+      content="Ambulance 24h/24 7j/7 : transport sanitaire, transferts, consultations."
+    />
+    <meta name="twitter:image" content="assets/img/hero.jpg" />
+
+    <!-- Hint sitemap (place aussi un sitemap.xml sur ton serveur) -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="assets/img/hero.jpg" />
+
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind config : palette bleue + animations -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: "#EAF2FF",
+                100: "#D7E6FF",
+                200: "#AFCBFF",
+                300: "#87AFFF",
+                400: "#4F86FF",
+                500: "#0B5FFF",
+                600: "#064DE0",
+                700: "#083B9A",
+                800: "#062F7A",
+                900: "#05265E"
+              }
+            },
+            boxShadow: {
+              soft: "0 14px 40px rgba(2, 6, 23, 0.10)",
+            },
+            keyframes: {
+              floaty: {
+                "0%, 100%": { transform: "translateY(0px)" },
+                "50%": { transform: "translateY(-8px)" },
+              },
+              fadeUp: {
+                "0%": { opacity: 0, transform: "translateY(12px)" },
+                "100%": { opacity: 1, transform: "translateY(0px)" },
+              },
+              shimmer: {
+                "0%": { transform: "translateX(-120%)" },
+                "100%": { transform: "translateX(120%)" },
+              },
+            },
+            animation: {
+              floaty: "floaty 6s ease-in-out infinite",
+              fadeUp: "fadeUp .7s ease-out both",
+              shimmer: "shimmer 1.6s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- JSON-LD (Schema.org) : adapte nom, adresse, téléphone, zone, réseaux -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": ["LocalBusiness", "MedicalBusiness"],
+        "name": "Ambulance 24/7",
+        "description": "Transport sanitaire 24h/24 7j/7 : consultations, transferts inter-établissements, retour à domicile.",
+        "telephone": "+21600000000",
+        "url": "https://exemple.tn/",
+        "image": "https://exemple.tn/assets/img/hero.jpg",
+        "priceRange": "$$",
+        "areaServed": [
+          { "@type": "City", "name": "Ville / Région 1" },
+          { "@type": "City", "name": "Ville / Région 2" }
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Votre adresse",
+          "addressLocality": "Votre ville",
+          "addressCountry": "TN"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+          }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/votrepage",
+          "https://www.instagram.com/votrepage"
+        ]
+      }
+    </script>
+
+    <style>
+      /* Scrollbar smooth + sélection clean */
+      html { scroll-behavior: smooth; }
+    </style>
+  </head>
+
+  <body class="bg-white text-slate-900">
+    <!-- Skip link -->
+    <a href="#accueil" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-2 focus:shadow-soft">
+      Aller au contenu
+    </a>
+
+    <!-- HEADER -->
+ <header class="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="flex h-16 items-center justify-between">
+
+      <!-- LOGO -->
+      <a href="#accueil" class="group flex items-center">
+        <img
+          src="assets/img/logo.png"
+          alt="Amine Ambulance – Transport sanitaire 24h/24"
+          class="h-20 w-auto transition group-hover:scale-105"
+        />
+      </a>
+
+      <!-- NAV DESKTOP -->
+      <nav class="hidden items-center gap-6 md:flex" aria-label="Navigation principale">
+        <a class="text-sm font-semibold text-slate-700 hover:text-brand-700" href="#accueil">Accueil</a>
+        <a class="text-sm font-semibold text-slate-700 hover:text-brand-700" href="#apropos">À propos</a>
+        <a class="text-sm font-semibold text-slate-700 hover:text-brand-700" href="#services">Services</a>
+        <a class="text-sm font-semibold text-slate-700 hover:text-brand-700" href="#contact">Contact</a>
+        <a
+          href="tel:+21600000000"
+          class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-black text-white shadow-soft hover:bg-brand-700"
+        >
+          Appeler
+        </a>
+      </nav>
+
+      <!-- MENU MOBILE -->
+      <button
+        id="menuBtn"
+        class="inline-flex items-center justify-center rounded-xl border px-3 py-2 text-sm font-semibold md:hidden"
+        aria-expanded="false"
+        aria-controls="mobileMenu"
+      >
+        Menu
+      </button>
+    </div>
+
+    <!-- NAV MOBILE -->
+    <div id="mobileMenu" class="hidden pb-4 md:hidden" aria-label="Menu mobile">
+      <div class="grid gap-2">
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-brand-50" href="#accueil">Accueil</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-brand-50" href="#apropos">À propos</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-brand-50" href="#services">Services</a>
+        <a class="rounded-xl px-3 py-2 text-sm font-semibold hover:bg-brand-50" href="#contact">Contact</a>
+        <a
+          href="tel:+21600000000"
+          class="rounded-xl bg-brand-600 px-3 py-2 text-center text-sm font-black text-white hover:bg-brand-700"
+        >
+          Appeler maintenant
+        </a>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="relative overflow-hidden">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-b from-brand-50 to-white"></div>
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+        <div class="grid items-center gap-10 lg:grid-cols-2">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-white px-3 py-1 text-xs font-black text-slate-700">
+              <span class="inline-block h-2 w-2 rounded-full bg-emerald-500"></span>
+              Ambulance 24h/24 • 7j/7
+            </div>
+
+            <h1 class="mt-4 text-3xl font-black tracking-tight sm:text-4xl">
+              Transport sanitaire & ambulance
+              <span class="block text-brand-700">intervention rapide 24/7</span>
+            </h1>
+
+            <p class="mt-4 text-base leading-relaxed text-slate-600">
+              Besoin d’un <strong>transport médicalisé</strong> ou <strong>non médicalisé</strong> ?
+              Nous assurons les consultations, transferts, hospitalisations et retours à domicile.
+            </p>
+
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="tel:+21600000000"
+                class="inline-flex items-center justify-center rounded-xl bg-brand-600 px-5 py-3 text-sm font-black text-white shadow-soft hover:bg-brand-700"
+              >
+                Urgence : +216 00 000 000
+              </a>
+
+              <a
+                href="#contact"
+                class="inline-flex items-center justify-center rounded-xl border px-5 py-3 text-sm font-black hover:bg-brand-50"
+              >
+                Demander un devis
+              </a>
+            </div>
+
+            <dl class="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border bg-white p-4">
+                <dt class="text-xs font-black text-slate-500">Disponibilité</dt>
+                <dd class="mt-1 text-sm font-black">24h/24</dd>
+              </div>
+              <div class="rounded-2xl border bg-white p-4">
+                <dt class="text-xs font-black text-slate-500">Couverture</dt>
+                <dd class="mt-1 text-sm font-black">Local + inter-villes</dd>
+              </div>
+              <div class="rounded-2xl border bg-white p-4 col-span-2 sm:col-span-1">
+                <dt class="text-xs font-black text-slate-500">Priorité</dt>
+                <dd class="mt-1 text-sm font-black">Sécurité patient</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="relative reveal">
+            <div class="absolute -inset-6 -z-10 rounded-[2rem] bg-brand-50"></div>
+            <div class="overflow-hidden rounded-[2rem] border bg-white shadow-soft">
+             <img
+    src="assets/img/hero.jpg"
+    alt="Ambulance 24/7 en intervention"
+    class="h-full w-full object-contain sm:object-cover"
+    loading="eager"
+  />
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-4">
+                  <div>
+                    <p class="text-sm font-black">Centre d’appel</p>
+                    <p class="mt-1 text-sm text-slate-600">
+                      Réponse immédiate, organisation du transport, suivi simple.
+                    </p>
+                  </div>
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-xs font-black text-emerald-700">
+                    En ligne
+                  </span>
+                </div>
+
+                <div class="mt-5 grid gap-3 sm:grid-cols-2">
+                  <a
+                    href="https://wa.me/21600000000"
+                    class="rounded-xl border px-4 py-3 text-center text-sm font-black hover:bg-brand-50"
+                  >
+                    WhatsApp
+                  </a>
+                  <a
+                    href="tel:+21600000000"
+                    class="rounded-xl bg-brand-600 px-4 py-3 text-center text-sm font-black text-white hover:bg-brand-700"
+                  >
+                    Appeler
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pointer-events-none absolute -bottom-6 -left-6 hidden sm:block animate-floaty">
+              <div class="rounded-2xl bg-white px-4 py-3 shadow-soft ring-1 ring-slate-100">
+                <p class="text-xs font-black text-slate-500">Transport</p>
+                <p class="text-sm font-black text-slate-900">Consultations • Dialyse</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- A PROPOS -->
+    <section id="apropos" class="border-t bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+          <div class="order-2 lg:order-1 reveal">
+            <h2 class="text-2xl font-black tracking-tight">À propos</h2>
+            <p class="mt-3 text-slate-600 leading-relaxed">
+              Notre service d’ambulance assure une prise en charge fiable : ponctualité, confort et sécurité.
+              Nos équipes sont formées et nos véhicules sont équipés pour répondre aux besoins du patient.
+            </p>
+
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-2xl border p-5 transition hover:-translate-y-0.5 hover:shadow-soft">
+                <p class="text-sm font-black">Équipe qualifiée</p>
+                <p class="mt-1 text-sm text-slate-600">Ambulanciers formés et accompagnement rassurant.</p>
+              </div>
+              <div class="rounded-2xl border p-5 transition hover:-translate-y-0.5 hover:shadow-soft">
+                <p class="text-sm font-black">Véhicules équipés</p>
+                <p class="mt-1 text-sm text-slate-600">Matériel adapté, hygiène et sécurité.</p>
+              </div>
+              <div class="rounded-2xl border p-5 transition hover:-translate-y-0.5 hover:shadow-soft">
+                <p class="text-sm font-black">Disponibilité 24/7</p>
+                <p class="mt-1 text-sm text-slate-600">Urgence ou réservation, réponse rapide.</p>
+              </div>
+              <div class="rounded-2xl border p-5 transition hover:-translate-y-0.5 hover:shadow-soft">
+                <p class="text-sm font-black">Transferts</p>
+                <p class="mt-1 text-sm text-slate-600">Clinique ⇄ hôpital, inter-villes sur demande.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order-1 lg:order-2 reveal">
+            <div class="overflow-hidden rounded-[2rem] border bg-brand-50 shadow-soft">
+             <img
+  src="assets/img/about.jpg"
+  alt="Équipe et véhicule ambulance"
+  class="h-80 w-full object-contain bg-slate-100 sm:h-[28rem]"
+  loading="lazy"
+/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="border-t bg-brand-50">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="max-w-2xl reveal">
+          <h2 class="text-2xl font-black tracking-tight">Services</h2>
+          <p class="mt-2 text-slate-600">
+            Urgence, consultation, transfert inter-établissements, retour à domicile : une solution adaptée à chaque besoin.
+          </p>
+        </div>
+
+        <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="reveal overflow-hidden rounded-2xl border bg-white shadow-soft transition hover:-translate-y-1">
+            <img src="assets/img/service-1.jpg" alt="Urgence et intervention" class="h-44 w-full object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-base font-black">Urgence & intervention</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Prise en charge rapide, transport sécurisé et coordination 24h/24.
+              </p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-2xl border bg-white shadow-soft transition hover:-translate-y-1">
+            <img src="assets/img/service-2.jpg" alt="Transport pour consultations et soins" class="h-44 w-full object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-base font-black">Consultations & soins</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Rendez-vous médicaux : dialyse, examens, kinésithérapie, consultation.
+              </p>
+            </div>
+          </article>
+
+          <article class="reveal overflow-hidden rounded-2xl border bg-white shadow-soft transition hover:-translate-y-1">
+            <img src="assets/img/service-3.jpeg" alt="Transfert inter-établissements" class="h-44 w-full object-cover" loading="lazy" />
+            <div class="p-6">
+              <h3 class="text-base font-black">Transferts inter-établissements</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Clinique ⇄ hôpital, inter-villes, organisation simple et ponctuelle.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="mt-8 reveal rounded-2xl border bg-white p-6">
+          <p class="text-sm font-black">Besoin d’un transport sanitaire rapidement ?</p>
+          <p class="mt-1 text-sm text-slate-600">
+            Décris ta demande (ville, date/heure, état du patient) et on te répond tout de suite.
+          </p>
+          <div class="mt-4 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#contact"
+              class="rounded-xl border px-5 py-3 text-center text-sm font-black hover:bg-brand-50"
+            >
+              Demander un devis
+            </a>
+            <a
+              href="tel:+21600000000"
+              class="rounded-xl bg-brand-600 px-5 py-3 text-center text-sm font-black text-white hover:bg-brand-700"
+            >
+              Appeler maintenant
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="border-t bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-2">
+          <div class="reveal">
+            <h2 class="text-2xl font-black tracking-tight">Contact</h2>
+            <p class="mt-2 text-slate-600">
+              Pour une urgence, appelle directement. Sinon, envoie une demande : on te rappelle rapidement.
+            </p>
+
+            <div class="mt-6 grid gap-3">
+              <a
+                href="tel:+21600000000"
+                class="flex items-center justify-between rounded-2xl border px-5 py-4 hover:bg-brand-50"
+              >
+                <span class="text-sm font-black">📞 Téléphone</span>
+                <span class="text-sm text-slate-600">+216 00 000 000</span>
+              </a>
+
+              <a
+                href="https://wa.me/21600000000"
+                class="flex items-center justify-between rounded-2xl border px-5 py-4 hover:bg-brand-50"
+              >
+                <span class="text-sm font-black">💬 WhatsApp</span>
+                <span class="text-sm text-slate-600">Message direct</span>
+              </a>
+
+              <div class="rounded-2xl border px-5 py-4">
+                <p class="text-sm font-black">📍 Adresse</p>
+                <p class="mt-1 text-sm text-slate-600">Votre adresse, Ville</p>
+              </div>
+            </div>
+
+            <p class="mt-6 text-xs text-slate-500">
+              Astuce SEO local : ajoute ta ville dans le footer + une page Google Business Profile.
+            </p>
+          </div>
+
+          <div class="reveal rounded-[2rem] border bg-brand-50 p-6 shadow-soft">
+            <form
+              class="grid gap-4"
+              onsubmit="event.preventDefault(); window.alert('Message envoyé (démo). Connecter à EmailJS / backend si besoin.');"
+              aria-label="Formulaire de contact"
+            >
+              <div>
+                <label class="text-sm font-black" for="name">Nom</label>
+                <input
+                  id="name"
+                  class="mt-1 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-brand-600"
+                  type="text"
+                  placeholder="Votre nom"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+
+              <div>
+                <label class="text-sm font-black" for="phone">Téléphone</label>
+                <input
+                  id="phone"
+                  class="mt-1 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-brand-600"
+                  type="tel"
+                  placeholder="+216 ..."
+                  required
+                  autocomplete="tel"
+                />
+              </div>
+
+              <div>
+                <label class="text-sm font-black" for="type">Type de demande</label>
+                <select
+                  id="type"
+                  class="mt-1 w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-brand-600"
+                  required
+                >
+                  <option value="" selected disabled>Choisir…</option>
+                  <option>Urgence</option>
+                  <option>Consultation / soins</option>
+                  <option>Transfert</option>
+                  <option>Retour à domicile</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="text-sm font-black" for="message">Message</label>
+                <textarea
+                  id="message"
+                  class="mt-1 min-h-[120px] w-full rounded-xl border bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-brand-600"
+                  placeholder="Ville, date/heure, besoin du patient…"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                class="rounded-xl bg-brand-600 px-5 py-3 text-sm font-black text-white shadow-soft hover:bg-brand-700"
+                type="submit"
+              >
+                Envoyer
+              </button>
+
+              <p class="text-xs text-slate-500">
+                Pour un vrai envoi, on peut brancher EmailJS / WhatsApp / API (PHP, Node, etc.).
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p class="text-sm text-slate-600">
+            © <span id="year"></span> Ambulance 24/7 — Transport sanitaire 24h/24, 7j/7
+          </p>
+          <div class="flex gap-4 text-sm font-semibold text-slate-700">
+            <a href="#accueil" class="hover:text-brand-700">Accueil</a>
+            <a href="#apropos" class="hover:text-brand-700">À propos</a>
+            <a href="#services" class="hover:text-brand-700">Services</a>
+            <a href="#contact" class="hover:text-brand-700">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
